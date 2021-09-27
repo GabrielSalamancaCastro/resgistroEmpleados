@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>GESTOR DE PERSONAS</title>
+</head>
+<body>
+    <header>
+        <h2>EMPLEADOS</h2>
+        <nav>
+            <ul>
+                <li><a href="/index.html">REGISTRO</a></li>
+                <li><a href="http://localhost:8080/empleados/all">EMPLEADOS (JSON)</a></li>
+                <li><a href="./pages/listaPersonas.html">EMPLEADOS</a></li>
+            </ul>
+        </nav>
+        <h2>LOGIN</h2>
+
+    </header>
+
+    <section class="registro">
+
+    <h1>REGISTRO EMPLEADOS PARAMETA</h1>
+
+    <form class="registrarPersona">
+        <label>NOMBRES:</label>
+        <input type="text" id="nombre">
+        <label>APELLIDOS:</label>
+        <input type="text" id="apellido">
+        <label>TIPO DOCUMENTO:</label>
+        <select id="documento">
+            <option id="cc">Cedula de ciudadania</option>
+            <option id="pasaporte">Pasaporte</option>
+        </select>
+        <label>NUMERO DE DOCUMENTO:</label>
+        <input type="text" id="numeroDocumento">
+        <label>FECHA NACIMIENTO:</label>
+        <input type="date" id="nacimiento">
+        <label>FECHA DE VINCULACION:</label>
+        <input type="date" id="vinculacion">
+        <label>CARGO:</label>
+        <input type="text" id="cargo">
+        <label>SALARIO:</label>
+        <input type="number" id="salario">
+       
+
+
+    </form>
+
+    <button id="registro-btn">REGISTRAR EMPLEADO</button>
+    </section> 
+
+    <div id="confirmacionRegistro">
+
+    </div>
+    
+    <script src="js/scriptIndex.js"></script>
+    
+    
+
+</body>
+</html>

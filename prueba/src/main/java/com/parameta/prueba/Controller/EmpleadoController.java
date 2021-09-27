@@ -19,7 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("empleados")
 public class EmpleadoController {
-    
+
     /* ==================== ATRIBUTOS ==========================*/
     private EmpleadoService empleadoService;
 
