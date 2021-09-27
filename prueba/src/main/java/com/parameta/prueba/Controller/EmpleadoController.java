@@ -6,6 +6,7 @@ import com.parameta.prueba.Service.EmpleadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -18,8 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("empleados")
 public class EmpleadoController {
-
-
+    
     /* ==================== ATRIBUTOS ==========================*/
     private EmpleadoService empleadoService;
 
@@ -29,8 +29,9 @@ public class EmpleadoController {
     public EmpleadoController(EmpleadoService empleadoService) {
         this.empleadoService = empleadoService;
     }
-    /* ==================== METODOS GET ==========================*/
 
+
+    /* ==================== METODOS GET ==========================*/
     @GetMapping("/all")
     public List<Empleado> getAllEmpleados(){
         return empleadoService.findAll();
@@ -39,6 +40,11 @@ public class EmpleadoController {
     @GetMapping("/{id}")
     public Empleado getEmpleadoByID(@PathVariable Long id){
         return empleadoService.findById(id).orElse(null);
+    }
+
+    @GetMapping("/documento/{documento}")
+    public Empleado getEmpleadoByDocumento(@PathVariable String documento){
+        return empleadoService.findEmpleadoByDocumento(documento);
     }
 
     /* ==================== METODOS POST ==========================*/
